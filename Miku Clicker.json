@@ -80,6 +80,30 @@
         "name": "Miku_Clicked_State.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Miku_Clicked.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Miku_Clicked.png\"}",
+        "name": "Miku_Clicked",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Miku_Not_Clicked.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Miku_Not_Clicked",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "+lp.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "+lp.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -134,7 +158,18 @@
         "gameEditorMode": "instances-editor"
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "Upgrade1Bought",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Upgrade1Cost",
+          "type": "number",
+          "value": 20
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -145,8 +180,8 @@
           "name": "Miku_Clicking",
           "persistentUuid": "43f990ab-8f5b-4d6e-98ee-2ec4620af783",
           "width": 0,
-          "x": 445,
-          "y": 257,
+          "x": 666,
+          "y": 513,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -156,12 +191,12 @@
           "angle": 0,
           "customSize": true,
           "depth": 5,
-          "height": 123,
+          "height": 104,
           "keepRatio": true,
           "layer": "UI",
           "name": "PointsCountDisplay",
           "persistentUuid": "5d2832f5-8797-46a1-82b7-925d8d2ef1b7",
-          "width": 720,
+          "width": 646,
           "x": 2,
           "y": 4,
           "zOrder": 2,
@@ -188,16 +223,17 @@
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.2,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Miku_Normal_State.png",
+                      "image": "Miku_Not_Clicked",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 185,
+                        "y": 174.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -208,20 +244,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 112,
-                            "y": 103
+                            "x": 48,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 103
+                            "x": 330,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 428
+                            "x": 330,
+                            "y": 341
                           },
                           {
-                            "x": 112,
-                            "y": 428
+                            "x": 48,
+                            "y": 341
                           }
                         ]
                       ]
@@ -236,16 +272,17 @@
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.5,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Miku_Clicked_State.png",
+                      "image": "Miku_Clicked",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 185,
+                        "y": 174.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -256,20 +293,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 112,
-                            "y": 103
+                            "x": 48,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 103
+                            "x": 330,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 428
+                            "x": 330,
+                            "y": 341
                           },
                           {
-                            "x": 112,
-                            "y": 428
+                            "x": 48,
+                            "y": 341
                           }
                         ]
                       ]
@@ -323,11 +360,80 @@
             "lineHeight": 0,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Upgrade1",
+          "persistentUuid": "811f7975-0166-4715-b48a-bde030223f26",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "+lp.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1040,
+                            "y": 0
+                          },
+                          {
+                            "x": 1040,
+                            "y": 379
+                          },
+                          {
+                            "x": 0,
+                            "y": 379
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "Upgrades",
+            "children": [
+              {
+                "objectName": "Upgrade1"
+              }
+            ]
+          },
           {
             "objectName": "Miku_Clicking"
           },
@@ -476,6 +582,145 @@
               ]
             }
           ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Upgrade",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Upgrade1Bought",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Upgrade1",
+                "1811",
+                "83",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Upgrade1Bought",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Upgrade1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Upgrade1",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Clicks",
+                ">=",
+                "Upgrade1Cost"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "Upgrade1Bought",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "FinalClickPower",
+                "+",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Upgrade1",
+                "Scale",
+                "=",
+                "0.2"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -555,7 +800,7 @@
           "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "isLocked": false,
+          "isLocked": true,
           "name": "UI",
           "renderingType": "",
           "visibility": true,
