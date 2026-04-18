@@ -80,6 +80,46 @@
         "name": "Miku_Clicked_State.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Miku_Clicked.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Miku_Clicked.png\"}",
+        "name": "Miku_Clicked",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Miku_Not_Clicked.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Miku_Not_Clicked",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "+lp.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "+lp.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Basic_Skills_Button.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"Basic_Skills_Button.png\",\"extension\":\".png\"}",
+        "name": "Basic_Skills_Button.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Basic_Skills_Button.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Basic_Skills_Button",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -134,7 +174,18 @@
         "gameEditorMode": "instances-editor"
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "Upgrade1Bought",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Upgrade1Cost",
+          "type": "number",
+          "value": 20
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -145,8 +196,8 @@
           "name": "Miku_Clicking",
           "persistentUuid": "43f990ab-8f5b-4d6e-98ee-2ec4620af783",
           "width": 0,
-          "x": 445,
-          "y": 257,
+          "x": 666,
+          "y": 513,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -156,15 +207,32 @@
           "angle": 0,
           "customSize": true,
           "depth": 5,
-          "height": 123,
+          "height": 104,
           "keepRatio": true,
           "layer": "UI",
-          "name": "PointsCountDisplay",
+          "name": "PopularityCountDisplay",
           "persistentUuid": "5d2832f5-8797-46a1-82b7-925d8d2ef1b7",
-          "width": 720,
+          "width": 646,
           "x": 2,
           "y": 4,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 2,
+          "height": 39,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "CurrentPopularityPerClick",
+          "persistentUuid": "e687396f-2956-4756-becd-6a8924107369",
+          "width": 707,
+          "x": 6,
+          "y": 86,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -188,16 +256,17 @@
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.2,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Miku_Normal_State.png",
+                      "image": "Miku_Not_Clicked",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 185,
+                        "y": 174.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -208,20 +277,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 112,
-                            "y": 103
+                            "x": 48,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 103
+                            "x": 330,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 428
+                            "x": 330,
+                            "y": 341
                           },
                           {
-                            "x": 112,
-                            "y": 428
+                            "x": 48,
+                            "y": 341
                           }
                         ]
                       ]
@@ -236,16 +305,17 @@
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.5,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Miku_Clicked_State.png",
+                      "image": "Miku_Clicked",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 185,
+                        "y": 174.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -256,20 +326,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 112,
-                            "y": 103
+                            "x": 48,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 103
+                            "x": 330,
+                            "y": 16
                           },
                           {
-                            "x": 394,
-                            "y": 428
+                            "x": 330,
+                            "y": 341
                           },
                           {
-                            "x": 112,
-                            "y": 428
+                            "x": 48,
+                            "y": 341
                           }
                         ]
                       ]
@@ -284,7 +354,7 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "PointsCountDisplay",
+          "name": "PopularityCountDisplay",
           "persistentUuid": "50a73c81-09bc-445d-b629-6a4a791e3570",
           "smoothed": true,
           "type": "TextObject::Text",
@@ -292,7 +362,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "",
+          "string": "Temp\n",
           "font": "",
           "textAlignment": "left",
           "characterSize": 70,
@@ -315,11 +385,117 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "",
+            "text": "Temp\n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
             "characterSize": 70,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Basic_Skills_Upgrade",
+          "persistentUuid": "ed91e2b7-948e-418d-bad2-aad374ece24b",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Basic_Skills_Button",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Basic_Skills_Button",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 2
+                          },
+                          {
+                            "x": 173,
+                            "y": 2
+                          },
+                          {
+                            "x": 173,
+                            "y": 62
+                          },
+                          {
+                            "x": 3,
+                            "y": 62
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "CurrentPopularityPerClick",
+          "persistentUuid": "fcac5c13-dbb2-44ef-9cd1-95b1a3506cfc",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Temp",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 30,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Temp",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 30,
             "lineHeight": 0,
             "color": "0;0;0"
           }
@@ -329,10 +505,19 @@
         "folderName": "__ROOT",
         "children": [
           {
+            "folderName": "Upgrades"
+          },
+          {
             "objectName": "Miku_Clicking"
           },
           {
-            "objectName": "PointsCountDisplay"
+            "objectName": "PopularityCountDisplay"
+          },
+          {
+            "objectName": "Basic_Skills_Upgrade"
+          },
+          {
+            "objectName": "CurrentPopularityPerClick"
           }
         ]
       },
@@ -469,10 +654,170 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "PointsCountDisplay",
+                "PopularityCountDisplay",
                 "Text",
                 "=",
-                "\"Clicks: \" + Clicks"
+                "\"Popularity: \" + Clicks"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CurrentPopularityPerClick",
+                "Text",
+                "=",
+                "\"Popularity Per Click: \" + FinalClickPower*FinalClickMultiplier"
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Upgrade",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Upgrade1Bought",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Basic_Skills_Upgrade",
+                "1650",
+                "83",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Upgrade1Bought",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Basic_Skills_Upgrade"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Basic_Skills_Upgrade",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Clicks",
+                ">=",
+                "Upgrade1Cost"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "Upgrade1Bought",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "FinalClickPower",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Clicks",
+                "-",
+                "Upgrade1Cost"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Basic_Skills_Upgrade",
+                "Scale",
+                "=",
+                "2"
               ]
             }
           ]
