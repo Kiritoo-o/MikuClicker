@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 261,
+    "build": 266,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -66,26 +66,10 @@
   "resources": {
     "resources": [
       {
-        "file": "Miku_Normal_State.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Miku_Normal_State.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "Miku_Clicked_State.png",
         "kind": "image",
         "metadata": "",
         "name": "Miku_Clicked_State.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Miku_Clicked.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Miku_Clicked.png\"}",
-        "name": "Miku_Clicked",
         "smoothed": false,
         "userAdded": false
       },
@@ -98,26 +82,10 @@
         "userAdded": false
       },
       {
-        "file": "+lp.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "+lp.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "Basic_Skills_Button.png",
         "kind": "image",
         "metadata": "{\"localFilePath\":\"Basic_Skills_Button.png\",\"extension\":\".png\"}",
         "name": "Basic_Skills_Button.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Basic_Skills_Button.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Basic_Skills_Button",
         "smoothed": false,
         "userAdded": false
       }
@@ -233,6 +201,22 @@
           "x": 6,
           "y": 86,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Basic_Skills_Upgrade",
+          "persistentUuid": "94a450b3-a6c9-46e7-85d4-fded69d53754",
+          "width": 0,
+          "x": 2027,
+          "y": 215,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -416,7 +400,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Basic_Skills_Button",
+                      "image": "Basic_Skills_Button.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -505,16 +489,18 @@
         "folderName": "__ROOT",
         "children": [
           {
-            "folderName": "Upgrades"
+            "folderName": "Upgrades",
+            "children": [
+              {
+                "objectName": "Basic_Skills_Upgrade"
+              }
+            ]
           },
           {
             "objectName": "Miku_Clicking"
           },
           {
             "objectName": "PopularityCountDisplay"
-          },
-          {
-            "objectName": "Basic_Skills_Upgrade"
           },
           {
             "objectName": "CurrentPopularityPerClick"
