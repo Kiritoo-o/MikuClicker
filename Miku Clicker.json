@@ -204,22 +204,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Basic_Skills_Upgrade",
-          "persistentUuid": "94a450b3-a6c9-46e7-85d4-fded69d53754",
-          "width": 0,
-          "x": 2027,
-          "y": 215,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
